@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #ff3bffd8, #25baffda);
+}
+a {
+    text-decoration: none;
+    color: #fff;
+    margin-top: 20px;
+}
+#clock {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    width: 550px;
+    background: transparent;
+    border-radius: 3px;
+    animation: rodar 2.5s  infinite;
+}
+#clock div {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: inset rgba(25, 29, 255, 0.35);
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, .3);
+    letter-spacing: 3px;
+    animation: mudaCor 2s alternate infinite;
+}
+@keyframes mudaCor {
+    25% {background-color: rgba(25, 255, 255, 0.404);}
+    50% {background-color: rgba(148, 255, 25, 0.404);}
+    75% {background-color: rgba(255, 25, 186, 0.404);}
+    100% {background-color: rgba(25, 29, 255, 0.404);}
+}
+
+#clock span {
+    font-weight: bolder;
+    font-size: 60px;
+}
+#clock span.time {
+    font-size: 15px;
+}
+@media (max-width: 560px) {
+    #clock  {
+        width: 200px;
+        height: 550px;
+        flex-direction: column;
+    }
+    #clock div {
+        height: 140px;
+    }
+}
